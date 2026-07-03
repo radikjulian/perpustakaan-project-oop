@@ -28,6 +28,7 @@ class Library:
 
         loan = Loan(member, book)
         self.riwayat_peminjaman.append(loan)
+        return loan
 
     def kembalikan_buku(self, member:Member, book:Book):
         if book.is_tersedia():
@@ -50,17 +51,11 @@ class Library:
     def cek_ketersediaan(self, book: Book) -> str:
         return "Tersedia" if book.is_tersedia() else "Sedang dipinjam"
     
-    def tampilkan_buku(self):
-        print("=== Daftar Buku ===")
-        for b in self.daftar_buku:
-            print(b)
+    def get_daftar_buku(self):
+        return self.daftar_buku
 
-    def tampilkan_member(self):
-        print("=== Daftar Member ===")
-        for m in self.daftar_member:
-            print(m)
+    def get_daftar_member(self):
+        return self.daftar_member
 
-    def tampilkan_riwayat(self):
-        print("=== Riwayat Peminjaman ===")
-        for l in self.riwayat_peminjaman:
-            print(l)
+    def get_riwayat_peminjaman(self):
+        return self.riwayat_peminjaman

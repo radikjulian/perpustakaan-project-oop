@@ -2,9 +2,9 @@ from enum import Enum
 
 
 class StatusBuku(Enum):
-    TERSEDIA = "teresedia"
+    TERSEDIA = "tersedia"
     DIPINJAM = "dipinjam"
 
 class StatusPeminjaman(Enum):
     AKTIF = "aktif"
-    SELESAI = "selesi"
+    SELESAI = "selesai"

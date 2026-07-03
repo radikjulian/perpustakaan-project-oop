@@ -1,5 +1,5 @@
 from itertools import count
-from status import StatusBuku, StatusPeminjaman
+from status import StatusBuku
 
 
 class Book:

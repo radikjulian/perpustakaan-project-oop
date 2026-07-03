@@ -1,7 +1,7 @@
 from itertools import count
 from member import Member
 from book import Book
-from status import StatusBuku, StatusPeminjaman
+from status import StatusPeminjaman
 from datetime import datetime
 
 
