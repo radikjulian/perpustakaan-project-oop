@@ -23,12 +23,23 @@ class Library:
         if not book.is_tersedia() :
             raise ValueError(f"Buku '{book.judul}'sedang dipinjam, tidak bisa dipinjam member lain")
         
+        if member not in self.daftar_member:
+            print("Member tidak terdaftar")
+            return
+
+        if book not in self.daftar_buku:
+            print("Buku tidak tersedia di Library")
+            return
+
         book.status = StatusBuku.DIPINJAM
         member.buku_dipinjam.append(book)
 
         loan = Loan(member, book)
         self.riwayat_peminjaman.append(loan)
-        return loan
+        print("buku berhasil dipinjam")
+        return loan    
+
+            
 
     def kembalikan_buku(self, member:Member, book:Book):
         if book.is_tersedia():

@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 class StatusBuku(Enum):
     TERSEDIA = "tersedia"
     DIPINJAM = "dipinjam"
