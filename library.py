@@ -5,9 +5,9 @@ from loan import Loan
 
 class Library:
     def __init__(self):
-        self.daftar_buku = []
-        self.daftar_member = []
-        self.riwayat_peminjaman = []
+        self._daftar_buku = []
+        self._daftar_member = []
+        self._riwayat_peminjaman = []
 
     def tambah_buku(self, judul:str , penulis:str):
         buku = Book(judul, penulis)
@@ -64,10 +64,12 @@ class Library:
 
     @property
     def get_daftar_buku(self):
-        return tuple(self.daftar_buku)
+        return tuple(self._daftar_buku)
 
+    @property
     def get_daftar_member(self):
-        return self.daftar_member
+        return tuple(self._daftar_member)
 
+    @property
     def get_riwayat_peminjaman(self):
-        return self.riwayat_peminjaman
+        return tuple(self._riwayat_peminjaman)
