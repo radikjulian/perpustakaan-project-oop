@@ -61,9 +61,10 @@ class Library:
     
     def cek_ketersediaan(self, book: Book) -> str:
         return "Tersedia" if book.is_tersedia() else "Sedang dipinjam"
-    
+
+    @property
     def get_daftar_buku(self):
-        return self.daftar_buku
+        return tuple(self.daftar_buku)
 
     def get_daftar_member(self):
         return self.daftar_member
